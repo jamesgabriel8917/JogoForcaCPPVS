@@ -13,8 +13,9 @@
 #include "nao_acertou.hpp"
 
 using namespace std;
+using namespace Forca;
 
-string palavra_secreta;
+static string palavra_secreta;
 map<char, bool> chutou;
 vector<char> chutes_errados;
 

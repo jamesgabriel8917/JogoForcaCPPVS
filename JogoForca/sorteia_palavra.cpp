@@ -1,4 +1,5 @@
 #include <vector>
+#include <ctime>
 #include "le_arquivo.hpp"
 
 std::string sorteia_palavra()
