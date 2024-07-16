@@ -17,7 +17,6 @@
 
 using namespace std;
 
-string palavra_secreta; 
 map<char, bool> chutou;
 vector<char> chutes_errados;
 
@@ -25,7 +24,7 @@ int main () {
     imprime_cabecalho();
 
     le_arquivo();
-    palavra_secreta = sorteia_palavra();
+    const string palavra_secreta = sorteia_palavra();
 
     while(nao_acertou(chutou, palavra_secreta) && chutes_errados.size() < 5){
         imprime_erros(chutes_errados);
