@@ -1,4 +1,4 @@
 #include <map>
-#include <vector>
+#include <array>
 
-void chuta(std::map<char, bool>& chutou, std::vector<char>& chutes_errados, std::string& palavra_secreta);
+void chuta(std::map<char, bool>& chutou, std::array<char, 5>& chutes_errados, int& arraySize, std::string& palavra_secreta);

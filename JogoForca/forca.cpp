@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <map>
-#include <vector>
+#include <array>
 #include "imprime_cabecalho.hpp"
 #include "le_arquivo.hpp"
 #include "sorteia_palavra.hpp"
@@ -17,7 +17,9 @@ using namespace Forca;
 
 static string palavra_secreta;
 map<char, bool> chutou;
-vector<char> chutes_errados;
+int * arraySize = 0;
+array<char, 5>* chutes_errados;
+
 
 int main()
 {
@@ -25,12 +27,12 @@ int main()
 
     palavra_secreta = sorteia_palavra();
 
-    while(nao_acertou(palavra_secreta, chutou) && chutes_errados.size() < 5) {
-        imprime_erros(chutes_errados);
+    while(nao_acertou(palavra_secreta, chutou) && *arraySize < 5) {
+        imprime_erros(*chutes_errados);
 
         imprime_palavra(palavra_secreta, chutou);
 
-        chuta(chutou, chutes_errados, palavra_secreta);
+        chuta(chutou, *chutes_errados, *arraySize, palavra_secreta);
     }
 
     cout << "Fim de jogo!" << endl;
