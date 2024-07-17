@@ -17,8 +17,10 @@ using namespace Forca;
 
 static string palavra_secreta;
 map<char, bool> chutou;
-int * arraySize = 0;
-array<char, 5>* chutes_errados;
+int value = 0;
+int* arraySize = &value;
+std::array<char, 5>* chutes_errados = new std::array<char, 5> {}; // Inicialização com array vazio
+
 
 
 int main()
